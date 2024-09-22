@@ -1,0 +1,67 @@
+
+.pointer {
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.videoContainer {
+  width: 1000px;
+  border-radius: 10px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.videoContainer.fullScreenVideo {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.videoContainer.hidden {
+  cursor: none;
+}
+
+.time {
+  display: inline-block;
+  min-width: 4rem;
+  max-width: 3rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.controlBtn {
+  display: inline-block;
+  min-height: 3rem;
+  min-width: 3rem;
+  cursor: pointer;
+  background-color: #0000;
+  border: none;
+  outline: none;
+}
+.controlBtn svg {
+  fill: #e7e7e7;
+  font-size: 0.8em;
+  transform: scale(0.6);
+}
+#playPauseBtn svg {
+  transform: scale(0.8);
+}
+
+#fullScreen > svg {
+  fill: none;
+  transform: scale(0.6);
+}
+

@@ -1,0 +1,67 @@
+.timelineContainer {
+  position: relative;
+  width: 100%;
+  margin: 0 15px;
+  padding: 5px 0;
+}
+
+.timeline {
+  transition: all 200ms ease-in-out;
+  --progress: 0%;
+  --loaded: 0%;
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: #bbbbbb60;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* This is for showing the completed time for the video. */
+.timeline::before {
+  background-color: #e22121;
+  width: var(--progress, 0%);
+  z-index: 3;
+}
+/* To indicate the loaded content */
+.timeline::after {
+  width: var(--loaded, 0%);
+  background-color: #bbbbbb88;
+  z-index: 2;
+}
+.timeline::after,
+.timeline::before {
+  left: 0;
+  transition: height 200ms linear;
+  content: "";
+  position: absolute;
+  height: 100%;
+  max-width: 100%;
+}
+
+/* On hover, show bigger timeline */
+.timeline:hover,
+.timelineContainer:hover .timeline {
+  height: 5px;
+}
+
+/* The knob */
+#knob {
+  --size: 25px;
+  transition: scale 200ms ease;
+  content: "";
+  position: absolute;
+  width: var(--size, 0);
+  height: var(--size, 0);
+  cursor: pointer;
+  bottom: calc(50% - var(--size) / 2);
+  left: calc(var(--progress) - (var(--size) / 2));
+  scale: 0;
+  border-radius: 50%;
+  background-color: #e22121;
+  z-index: 4;
+}
+.timelineContainer:hover #knob,
+.scrubbing > #knob {
+  scale: 1;
+}

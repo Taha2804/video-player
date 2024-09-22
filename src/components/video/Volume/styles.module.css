@@ -1,0 +1,34 @@
+#volume {
+  cursor: default;
+  position: relative;
+}
+.volCont {
+  position: relative;
+  max-height: 3rem;
+}
+.volCont > div#volSlider {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  width: 30px;
+  height: 0;
+  transition: all 250ms linear;
+  opacity: 0.4;
+  background-color: #00000050;
+  border-radius: 3px;
+  overflow: hidden;
+}
+#volRange {
+  position: absolute;
+  transform: rotate(-90deg);
+  transform-origin: left;
+  bottom: 0;
+  left: 50%;
+  width: 100px;
+  cursor: pointer;
+}
+.volCont:hover > div#volSlider {
+  height: 115px;
+  border: 1px solid #e3e3e38e;
+  opacity: 1;
+}

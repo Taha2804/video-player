@@ -1,0 +1,34 @@
+{
+  "name": "video-player",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "npx prettier --write src/**/*.{js,ts,jsx,tsx,json,css,md}"
+  },
+  "dependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "hls": "^0.0.1",
+    "hls.js": "^1.5.13",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/github": "^10.1.3",
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "prettier": "^3.3.2",
+    "semantic-release": "^24.0.0",
+    "typescript": "^5"
+  }
+}
